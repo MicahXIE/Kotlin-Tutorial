@@ -1,0 +1,41 @@
+pipenv run jupyter notebook
+
+import pandas as pd
+from numpy import dtype
+
+> df = pd.read_csv('../data/titanic.csv', encoding='iso-8859-1')
+> df = pd.read_csv('../data/master_table_dim_patient.csv', encoding='iso-8859-1', dtype={'PATIENT_NUMBER': 'str'})
+
+> df = df[df.columns[2:]]
+> df = df.drop(['C', 'D'], axis=1)
+> df[df['dob_year'] < '1900']
+
+> df.columns = [col.lower() for col in df.columns]
+> df.columns = map(str.lower, df.columns)
+
+> df['survived']
+> df.survived
+
+> df.survived.value_counts()
+
+> df.survived.apply(lambda x: True if x == '1' else False)
+> df.survived.replace({"No":False, "Yes":True, "0":False, "1":True})
+
+
+> df.loc[df.puchase_date == '996/5/21', 'puchase_date'] = '1996/5/21'
+> df['dob'] = pd.to_datetime(df['dob'], format='%d/%m/%Y')
+
+> df['puchase_date'] = pd.to_datetime(df['puchase_date'])
+
+> df['age'].astype(int)
+> df = df[~df['patient_number'].isnull()].copy()
+> df = df[df['patient_number'].str.match('000\d{7}')]
+
+> df.isnull.sum()
+> df.isnull().sum(axis=1).head(10)
+
+> df.nunique()
+
+> df.age.describe()
+
+> df.sex.value_counts(normalize=True)
