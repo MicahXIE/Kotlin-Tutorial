@@ -39,3 +39,24 @@ from numpy import dtype
 > df.age.describe()
 
 > df.sex.value_counts(normalize=True)
+
+Caculate age
+
+> df['dob_year'] = df['dob'].apply(lambda x: x.split('/')[-1]).astype(int)
+> now = datetime.now()
+> now_year = now.year
+> df['age'] = now_year - df['dob_year']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
