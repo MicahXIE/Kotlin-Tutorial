@@ -24,3 +24,40 @@ git remote add origin git@bitbucket.org:Micah2019/ml-platform-core.git
 git pull origin master
 git remote add upstream git@bitbucket.org:ucare-tech/ml-platform-core.git
 git pull upstream master
+
+
+Branch Operation:
+# https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging
+git checkout -b iss53
+or
+git branch iss53
+git checkout iss53
+vim index.html
+git commit -a -m 'fixed the broken email'
+
+git checkout master  => switch to master
+git merge hotfix => merge the index.html
+
+git branch -d hotfix
+git commit -a -m 'C5 changes'
+
+git checkout master
+git merge iss53
+git branch -d iss53 # delete the iss53 branch
+
+git status
+
+
+<<<<<<< HEAD:index.html (master)
+<div id="footer">contact : email.support@github.com</div>
+======= (iss53)
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+
+
+
+
+
+
