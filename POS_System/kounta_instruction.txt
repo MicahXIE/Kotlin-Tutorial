@@ -1,9 +1,0 @@
-1. Kounta Menu
-https://support.kounta.com/hc/en-us/sections/360000036395-Adding-your-Menu-to-Kounta
-
-2. Printer Setup
-51965655
-
-https://support.kounta.com/hc/en-us/articles/203383504-Enable-DHCP-on-Epson-Printers-Windows-and-Mac
-https://support.kounta.com/hc/en-us/articles/201234300-Kounta-App-Printing-Choose-and-Setup-Hardware
-
