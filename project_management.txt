@@ -1,0 +1,17 @@
+1. tools
+
+project management:
+
+JIRA，Clickup, Trello, Worktile, Teambition
+
+issue track:
+
+Github, Gitlab, Gitee, bugzilla, mantisBT
+
+github:
+http://www.ruanyifeng.com/blog/2017/08/issue.html
+
+ProcessOn
+
+reference: https://www.zhihu.com/question/19565116
+           https://blog.csdn.net/wj1314250/article/details/81317284
