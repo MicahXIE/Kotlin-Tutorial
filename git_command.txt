@@ -85,5 +85,23 @@ reference: https://blog.csdn.net/matrix_laboratory/article/details/18034509
 
 你要知道的第一件事是，git rebase 和git merge 做的事其实是一样的。它们都被设计来将一个分支的更改并入另一个分支，只不过方式有些不同。
 
+将 master 分支合并到 feature 分支最简单的办法就是用下面这些命令：
+
+git checkout feature
+git merge master
+
+作为 merge 的替代选择，你可以像下面这样将 feature 分支并入 master 分支：
+
+git checkout feature
+git rebase master
+
+http://jartto.wang/2018/12/11/git-rebase/
+
+1.不利于代码 review
+设想一下，你要做 code review ，结果一个很小的功能，提交了 60 多次，会不会有一些崩溃？
+
+2.会造成分支污染
+你的项目充满了无用的 commit 纪录，如果有一天线上出现了紧急问题，你需要回滚代码，却发现海量的 commit 需要一条条来看。
+
 
 
