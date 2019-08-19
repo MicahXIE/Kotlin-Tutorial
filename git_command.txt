@@ -96,12 +96,40 @@ git checkout feature
 git rebase master
 
 http://jartto.wang/2018/12/11/git-rebase/
+https://ruphi.cn/archives/360/
+
 
 1.不利于代码 review
 设想一下，你要做 code review ，结果一个很小的功能，提交了 60 多次，会不会有一些崩溃？
 
 2.会造成分支污染
 你的项目充满了无用的 commit 纪录，如果有一天线上出现了紧急问题，你需要回滚代码，却发现海量的 commit 需要一条条来看。
+
+https://github.com/sunyongjian/blog/issues/29
+
+TODO: summarize the correct github flow
+
+remote branches rebase:
+https://ruphi.cn/archives/360/
+
+local branches rebase:
+https://backlog.com/git-tutorial/cn/stepup/stepup2_8.html
+
+
+git rebase steps:
+
+(1) git pull upstream develop
+(2) git checkout develop (local)
+(3) git rebase upstream/develop
+(4) fix commit conflict and git add ...
+(5) git rebase --continue or git rebase --skip
+(6) git push (-f) origin develop
+(7) send merge request
+
+
+
+
+
 
 
 
