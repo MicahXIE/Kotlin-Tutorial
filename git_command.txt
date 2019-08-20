@@ -118,13 +118,21 @@ https://backlog.com/git-tutorial/cn/stepup/stepup2_8.html
 
 git rebase steps:
 
-(1) git pull upstream develop
+(1) don't git pull upstream develop 
 (2) git checkout develop (local)
 (3) git rebase upstream/develop
 (4) fix commit conflict and git add ...
 (5) git rebase --continue or git rebase --skip
 (6) git push (-f) origin develop
 (7) send merge request
+
+
+rm specific change in rebase
+(1) git rebase -i <commit hash number>
+(2) drop corresponding commits and ^X
+(3) git rebase upstream/develop
+(4) git push -f origin develop
+
 
 
 
